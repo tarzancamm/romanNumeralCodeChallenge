@@ -8,15 +8,14 @@ const toRoman = (num) => {
     
         const romanKey = {M:1000,D:500,C:100,L:50,X:10,V:5,I:1}
         let roman = ''
-        for (key in romanKey) {
-          while ( num >= romanKey[key] ) {
-            roman += key;
-            num -= romanKey[key];
+        for (i in romanKey) {
+          while ( num >= romanKey[i] ) {
+            roman += i;
+            num -= romanKey[i];
           }
         }
     return roman;
 }
-
 
 
 console.log(toRoman(99))
